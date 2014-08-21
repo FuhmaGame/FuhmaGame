@@ -19,14 +19,13 @@ public class ScaleOverTime : MonoBehaviour
 	{
 		float t = 0.0f;
 
-		while (t < time)
-		{
-			//One of the most efficient ways to get a midpoint between two points
-			transform.position = Vector3.Lerp (initialScale, finalScale,t/time);
-
+		while(t <= time)
+		{						//One of the most efficient ways to get a midpoint between two points
+			transform.localScale = Vector3.Lerp(initialScale, finalScale, t/time);
 			t += Time.deltaTime;
 			yield return null;
 		}
+
 		transform.localScale = finalScale;
 	}
 }

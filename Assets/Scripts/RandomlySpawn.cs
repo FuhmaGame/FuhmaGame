@@ -15,12 +15,12 @@ public class RandomlySpawn : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		Invoke ("SpawnNow", Random.Range (minSpawnTime, maxSpawnTime));
+		Invoke ("SpawnNow", Random.Range(minSpawnTime, maxSpawnTime));
 	}
 	
 	void SpawnNow()
 	{
-		Instantiate (thingie, transform.position + new Vector3 (Random.Range (minHorizontal, maxHorizontal), Random.Range (minVertical, maxVertical)), Quaternion.identity);
+		Instantiate(thingie, transform.position + new Vector3(Random.Range(minHorizontal, maxHorizontal),Random.Range(minVertical, maxVertical)), Quaternion.identity);
 		Invoke ("SpawnNow", Random.Range (minSpawnTime, maxSpawnTime));
 	}
 }

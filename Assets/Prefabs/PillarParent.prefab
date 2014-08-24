@@ -9,9 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400010}
-  - 114: {fileID: 11400008}
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400008}
   m_Layer: 0
   m_Name: PillarParent
   m_TagString: Untagged
@@ -162,11 +162,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d311e32626d1b2499cbdbd5f49cf1e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 049b009948b0f284eb63626c79130ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0, z: 1}
-  speed: -10
+  direction: {x: 0, y: 0, z: -1}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1

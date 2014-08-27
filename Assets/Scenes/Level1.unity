@@ -74,6 +74,48 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
+--- !u!1 &154726409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 154726411}
+  - 114: {fileID: 154726410}
+  m_Layer: 0
+  m_Name: SpecialFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &154726410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 154726409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0e85e34de5e6c64582654b106b8e7f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cycleTime: 15
+  saturation: 1
+  brightness: 1
+--- !u!4 &154726411
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 154726409}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.15885448, y: 22.9113026, z: -16.9428787}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &497839868
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,6 +227,7 @@ GameObject:
   - 23: {fileID: 549939184}
   - 114: {fileID: 549939188}
   - 114: {fileID: 549939189}
+  - 114: {fileID: 549939190}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -268,6 +311,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+--- !u!114 &549939190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 549939183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae99711f485a7c4bae7502c691b40c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cycleTime: 30
+  saturation: 1
+  brightness: 1
 --- !u!1 &882091887
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,6 +28,6 @@ public class CycleMaterialColor : MonoBehaviour
 
 		hue = 1.0f;
 
-		StartCoroutine("CycleC0lors");
+		StartCoroutine("CycleColors");
 	}
 }

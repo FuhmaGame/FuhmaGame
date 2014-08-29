@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Grid8
-  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: Grid32
+  m_Shader: {fileID: 4800000, guid: ce16b919e099df14eaceca95ba628150, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -17,8 +17,8 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 8975c90522e4b41479469d982bbf3ba6, type: 3}
-          m_Scale: {x: 100, y: 100}
+          m_Texture: {fileID: 2800000, guid: 2a657400525cd054793a65644ff83d86, type: 3}
+          m_Scale: {x: 200, y: 200}
           m_Offset: {x: 0, y: 0}
     m_Floats:
       data:

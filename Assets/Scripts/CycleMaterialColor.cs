@@ -9,11 +9,7 @@ public class CycleMaterialColor : MonoBehaviour
 	public float saturation = 1.0f;
 	public float brightness = 1.0f;
 	
-	// Use this for initialization
-	void Start () 
-	{
-		StartCoroutine ("CycleColors");
-	}
+
 
 	void Update()
 	{

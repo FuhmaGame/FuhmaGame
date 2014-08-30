@@ -8,9 +8,22 @@ public class LoadLevelOnAnyKey : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.anyKeyDown) 
+		if(!GameManager.IsMobile())
 		{
-			Application.LoadLevel(levelName);
+			if(Input.anyKeyDown)
+			{
+				Application.LoadLevel(levelName);
+			}
+		}
+		else
+		{
+			foreach(Touch touch in Input.touches)
+			{
+				if(touch.phase == TouchPhase.Began)
+				{
+					Application.LoadLevel(levelName);
+				}
+			}
 		}
 	}
 }

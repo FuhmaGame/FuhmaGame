@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic; //gives access to container formats like a list
 
 public class GameManager : MonoBehaviour 
 {
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour
 	private float score = 0.0f;
 	private static float highScore = 0.0f;
 
-	private int[] highScores = new int[5];
+	private List<int> highScores = new List<int>();
 
 	private bool gameOver = false;
 	private bool hasSaved = false;
@@ -123,10 +124,10 @@ public class GameManager : MonoBehaviour
 	void SaveHighScore()
 	{
 		int highSlot = -1;
-		//just determining the score we beat, if any
-		for(int i = 0; i < highScores.Length; i++)
+		// count used for arrays
+		for(int i = 0; i < highScores.Count; i++)
 		{
-			if(highScores[i] < highScore)
+			if(highScores[i] < score)
 			{
 				highSlot = i;
 				break;
@@ -135,27 +136,31 @@ public class GameManager : MonoBehaviour
 
 		if(highSlot != -1)
 		{
-			for(int i = highScores.Length -1; i > highSlot; i--)
-			{
-				highScores[i] = highScores[i-1];
-			}
-			highScores [highSlot] = (int)highScore;
+			highScores.Insert(highSlot, (int)score);
+		}
+		else
+		{
+			highScores.Add((int)score);
 		}
 
 		//Save high score list
-		for(int i = 0; i < highScores.Length; i++)
+		for(int i = 0; i < highScores.Count; i++)
 		{
 			PlayerPrefs.SetInt ("HighScore" + i.ToString(), highScores[i]);
 		}
+
+		PlayerPrefs.SetInt ("ScoreNumber", highScores.Count);
 
 		PlayerPrefs.Save();
 	}
 
 	void LoadHighScore()
 	{
-		for(int i = 0; i < highScores.Length; i++)
+
+		highScores.Clear();
+		for(int i = 0; i < PlayerPrefs.GetInt("ScoreNumber"); i++)
 		{
-			highScores[i] = PlayerPrefs.GetInt("HighScore" + i.ToString());
+			highScores.Add(PlayerPrefs.GetInt("HighScore" + i.ToString()));
 		}
 	}
 

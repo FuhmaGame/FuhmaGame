@@ -8,5 +8,6 @@ public class LoadLevelOnTouched : MonoBehaviour
 	void Touched()
 	{
 		Application.LoadLevel(levelName);
+
 	}
 }

@@ -427,6 +427,7 @@ GameObject:
   - 65: {fileID: 1062385031}
   - 23: {fileID: 1062385030}
   - 114: {fileID: 1062385029}
+  - 114: {fileID: 1062385033}
   m_Layer: 0
   m_Name: HighScoresButtonButton
   m_TagString: Untagged
@@ -497,6 +498,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1062385027}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1062385033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1062385027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae99711f485a7c4bae7502c691b40c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorPropertyName: _Color
+  speed: .100000001
+  hue: .333330005
+  saturation: 1
+  brightness: 1
 --- !u!1 &1213654572
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,6 +659,7 @@ GameObject:
   - 65: {fileID: 1659213525}
   - 23: {fileID: 1659213524}
   - 114: {fileID: 1659213527}
+  - 114: {fileID: 1659213528}
   m_Layer: 0
   m_Name: StartButtonButton
   m_TagString: Untagged
@@ -712,6 +730,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: Level1
+--- !u!114 &1659213528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1659213522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae99711f485a7c4bae7502c691b40c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorPropertyName: _Color
+  speed: .100000001
+  hue: 0
+  saturation: 1
+  brightness: 1
 --- !u!1 &1937421255
 GameObject:
   m_ObjectHideFlags: 0

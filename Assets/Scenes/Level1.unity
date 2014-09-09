@@ -871,6 +871,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  dashSpeed: 2
+  dashDuration: 1
+  doubleTapSpeed: .5
 --- !u!114 &1148795313
 MonoBehaviour:
   m_ObjectHideFlags: 0

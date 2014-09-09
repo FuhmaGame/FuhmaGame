@@ -696,6 +696,7 @@ MonoBehaviour:
   maxVertical: 0
   minSpawnTime: .100000001
   maxSpawnTime: .5
+  spawnsPerSpeedUnit: .100000001
 --- !u!4 &882091889
 Transform:
   m_ObjectHideFlags: 0
@@ -1012,6 +1013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsPerUnitTravelled: 1
   gameSpeed: 10
+  gameSpeedIncreasePerSecond: 1
   titleScreenName: TitleScreen
   highScoresScreenName: HighScores
   previousScore: 0

@@ -16,11 +16,12 @@ public class MoveLeftAndRight : MonoBehaviour
 	private static bool isDashing = false;
 	private static float dashDirection = 1.0f;
 	private static float t = 0.0f;
+	private bool coroutineRunning = false;
 
 	// Use this for initialization
 	void Start () 
 	{
-		if(isDashing)
+		if(isDashing && !coroutineRunning)
 		{
 			StartCoroutine (Dash(dashSpeed*dashDirection));
 		}
@@ -29,6 +30,7 @@ public class MoveLeftAndRight : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+
 		//This moves our object left or right based on keyboard input
 		transform.position += Vector3.right*Input.GetAxis ("Horizontal")*speed*Time.deltaTime;
 
@@ -38,8 +40,9 @@ public class MoveLeftAndRight : MonoBehaviour
 				{
 					//Dash
 					Debug.Log ("DashLeft");
-					t = 0.0f;
+					t = Time.time;
 					dashDirection = -1.0f;
+					StopAllCoroutines();
 					StartCoroutine (Dash(dashSpeed*dashDirection));
 					buttonPressed = true;
 				}
@@ -61,8 +64,9 @@ public class MoveLeftAndRight : MonoBehaviour
 				{
 					//Dash
 					Debug.Log ("DashRight");
-				    t = 0.0f;
+				    t = Time.time;
 					dashDirection = 1.0f;
+					StopAllCoroutines();
 					StartCoroutine (Dash(dashSpeed*dashDirection));
 					buttonPressed = true;
 				}
@@ -82,20 +86,22 @@ public class MoveLeftAndRight : MonoBehaviour
 
 			lastTap += Time.deltaTime;
 
-			t += Time.deltaTime;
+
 	}
 
 	IEnumerator Dash(float speed)
 	{
 	
 		isDashing = true;
+		coroutineRunning = true;
 
-		while(t <= dashDuration)
+		while(Time.time - t <= dashDuration)
 		{
 			transform.position += Vector3.right * speed * Time.deltaTime;
 			yield return null;
 		}
 		isDashing = false;
+		coroutineRunning = false;
 	}
 
 }

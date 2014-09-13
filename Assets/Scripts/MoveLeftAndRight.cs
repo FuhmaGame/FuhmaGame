@@ -32,10 +32,14 @@ public class MoveLeftAndRight : MonoBehaviour
 			StopAllCoroutines();
 			StartCoroutine (Dash(dashSpeed*dashDirection));
 		}
-		//This moves our object left or right based on keyboard input
-		transform.position += Vector3.right*Input.GetAxis ("Horizontal")*speed*Time.deltaTime;
 
-			if(PseudoInput.Instance.leftPressed)
+		if(!isDashing)
+		{
+			//This moves our object left or right based on keyboard input
+			transform.position += Vector3.right*Input.GetAxis ("Horizontal")*speed*Time.deltaTime;
+		}
+
+		if(PseudoInput.Instance.leftPressed || Input.GetAxis ("Horizontal") < 0.0f )
 			{
 				if(pressedLeftLast && !buttonPressed && lastTap <= doubleTapSpeed)
 				{
@@ -58,7 +62,7 @@ public class MoveLeftAndRight : MonoBehaviour
 
 			}
 
-			if(PseudoInput.Instance.rightPressed)
+		if(PseudoInput.Instance.rightPressed || Input.GetAxis ("Horizontal") > 0.0f)
 			{
 
 				if(pressedRightLast && !buttonPressed && lastTap <= doubleTapSpeed)
@@ -80,7 +84,7 @@ public class MoveLeftAndRight : MonoBehaviour
 					buttonPressed = true;
 				}
 			}
-			if(!PseudoInput.Instance.rightPressed && !PseudoInput.Instance.leftPressed)
+		if(!PseudoInput.Instance.rightPressed && !PseudoInput.Instance.leftPressed && Input.GetAxis ("Horizontal") == 0.0f)
 			{
 				buttonPressed = false;
 			}

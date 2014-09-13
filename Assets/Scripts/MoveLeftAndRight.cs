@@ -21,16 +21,17 @@ public class MoveLeftAndRight : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		if(isDashing && !coroutineRunning)
-		{
-			StartCoroutine (Dash(dashSpeed*dashDirection));
-		}
+
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-
+		if(isDashing && !coroutineRunning)
+		{
+			StopAllCoroutines();
+			StartCoroutine (Dash(dashSpeed*dashDirection));
+		}
 		//This moves our object left or right based on keyboard input
 		transform.position += Vector3.right*Input.GetAxis ("Horizontal")*speed*Time.deltaTime;
 

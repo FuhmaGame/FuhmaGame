@@ -258,7 +258,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 164521427}
-  m_Text: Music
+  m_Text: "Music\r\n\t\t"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -543,8 +543,8 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 864867794}
-  m_Text: "Core Team\r\nMaximilian Maroe\r\nPhilip Wilson\r\nJeffrey Hawthorne\r\nJoshua
-    Santiago"
+  m_Text: "Core Team\r\nMaximilian Maroe\r\nPhilip Wilson\r\nJeffrey Hawthorne\r\r\n\t\tJoshua
+    Santiago\r\n\t\t"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1

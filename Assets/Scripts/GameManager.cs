@@ -66,7 +66,8 @@ public class GameManager : MonoBehaviour
 	void Update ()
 	{
 		if(Application.loadedLevelName != titleScreenName &&
-		   Application.loadedLevelName != highScoresScreenName)
+		   Application.loadedLevelName != highScoresScreenName &&
+		   Application.loadedLevelName != "Credits")
 		{
 			if (GameObject.FindGameObjectWithTag ("Player") == null) 
 			{
@@ -175,7 +176,8 @@ public class GameManager : MonoBehaviour
 	{
 
 		if(Application.loadedLevelName != titleScreenName &&
-		   Application.loadedLevelName != highScoresScreenName)
+		   Application.loadedLevelName != highScoresScreenName &&
+		   Application.loadedLevelName != "Credits")
 		{
 			int currentScore = (int)score;
 			int currentHighScore = (int)highScore;

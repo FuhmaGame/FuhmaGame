@@ -33,12 +33,15 @@ public class GameManager : MonoBehaviour
 	[HideInInspector]
 	public int previousScore = 0;
 
-	private float score = 0.0f;
-	private static float highScore = 0.0f;
+	[HideInInspector]
+	public float score = 0.0f;
+	public static float highScore = 0.0f;
 
 	private List<int> highScores = new List<int>();
 
-	private bool gameOver = false;
+	[HideInInspector]
+	public bool gameOver = false;
+
 	private bool hasSaved = false;
 	private float initialGameSpeed;
 
@@ -174,7 +177,7 @@ public class GameManager : MonoBehaviour
 
 	void OnGUI()
 	{
-
+		/*
 		if(Application.loadedLevelName != titleScreenName &&
 		   Application.loadedLevelName != highScoresScreenName &&
 		   Application.loadedLevelName != "Credits")
@@ -188,6 +191,7 @@ public class GameManager : MonoBehaviour
 				GUILayout.Label ("Game Over! Press any key to quit!");
 			}
 		}
+		 */
 	}
 
 	public static bool IsMobile()

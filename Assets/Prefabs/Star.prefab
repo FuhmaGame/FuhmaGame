@@ -153,14 +153,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ae99711f485a7c4bae7502c691b40c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f499aa7ff05d2a4781a5bf63c9ef371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   colorPropertyName: _Color
-  speed: .100000001
-  hue: .333333313
-  saturation: 1
-  brightness: 1
+  targetColorPropertyName: _TintColor
+  targetTag: Grid32
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5393bc6d4f7fb1640a5b1e9804992be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gib: {fileID: 100000, guid: a998afa2539b0cc4ca757054586f040c, type: 2}
+  gib: {fileID: 100000, guid: 3dfc2d706b79bcb4eb7b71ee594889c9, type: 2}
   scoreValue: 100
 --- !u!135 &13500000
 SphereCollider:

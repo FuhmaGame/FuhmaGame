@@ -1227,10 +1227,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1604280793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73fc020732baaa244b12f7db112e5d90, type: 3}
+  m_Script: {fileID: 11500000, guid: 90fe889ec50d2dc4bbd7c0c528915d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreSlot: 0
 --- !u!102 &1604280796
 TextMesh:
   serializedVersion: 3
